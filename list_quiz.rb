@@ -20,18 +20,28 @@ def three_even?(list)
 
 end
 
-puts three_even?([2, 1, 3, 5])   # false
-puts three_even?([2, 4, 12, 5])  # true
-puts three_even?([2, 1, 4, 6])   # false
-puts three_even?([1, 4, 6, 4])   # true
-puts three_even?([])             # false
+# puts three_even?([2, 1, 3, 5])   # false
+# puts three_even?([2, 4, 12, 5])  # true
+# puts three_even?([2, 1, 4, 6])   # false
+# puts three_even?([1, 4, 6, 4])   # true
+# puts three_even?([])             # false
 
 def bigger_two(list_a, list_b)
+    if list_a[0] + list_a[1] > list_b[0] + list_b[1]
+        print list_a
+    end
 
+    if list_a[0] + list_a[1] < list_b[0] + list_b[1] 
+        print list_b
+    end
+
+    if list_a[0] + list_a[1] == list_b[0] + list_b[1]
+        print list_a
+    end
 end
 
-bigger_two([1, 2], [3, 4]) # [3, 4]
-bigger_two([1, 7], [4, 4]) # [1, 7]
+puts bigger_two([1, 2], [3, 4]) # [3, 4]
+puts bigger_two([1, 7], [4, 4]) # [1, 7]
 
 def series_up(num)
 
